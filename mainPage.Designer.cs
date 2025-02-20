@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewItem listViewItem1 = new ListViewItem(new string[] { "Laundry", "Put black clothes in washing machine" }, -1);
             taskManagerLabel = new Label();
             newTaskButton = new Button();
             panel1 = new Panel();
@@ -36,7 +35,7 @@
             descriptionTextBox = new TextBox();
             label1 = new Label();
             taskList = new ListView();
-            taskTitle = new ColumnHeader();
+            task = new ColumnHeader();
             description = new ColumnHeader();
             deleteButton = new Button();
             panel1.SuspendLayout();
@@ -107,10 +106,9 @@
             // taskList
             // 
             taskList.BackColor = SystemColors.ActiveCaption;
-            taskList.Columns.AddRange(new ColumnHeader[] { taskTitle, description });
+            taskList.Columns.AddRange(new ColumnHeader[] { task, description });
             taskList.FullRowSelect = true;
             taskList.GridLines = true;
-            taskList.Items.AddRange(new ListViewItem[] { listViewItem1 });
             taskList.Location = new Point(92, 153);
             taskList.Name = "taskList";
             taskList.Size = new Size(630, 269);
@@ -119,10 +117,10 @@
             taskList.UseCompatibleStateImageBehavior = false;
             taskList.View = View.Details;
             // 
-            // taskTitle
+            // task
             // 
-            taskTitle.Text = "Task Title";
-            taskTitle.Width = 250;
+            task.Text = "Task";
+            task.Width = 250;
             // 
             // description
             // 
@@ -169,7 +167,7 @@
         private Panel panel1;
         private Label label1;
         private ListView taskList;
-        private ColumnHeader taskTitle;
+        private ColumnHeader task;
         private ColumnHeader description;
         private TextBox descriptionTextBox;
         private TextBox taskTextBox;
